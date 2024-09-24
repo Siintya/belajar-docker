@@ -1,0 +1,63 @@
+1. Kunjungi situs web remsmi docker https://www.docker.com/products/docker-desktop/
+2. Pada home page pilih Download for Linux  > Platform Ubuntu
+3. Baca & cermati bagian Prerequisites
+4. Pada Install Docker Desktop, klik Install using the apt repository.
+   1) Set up Docker's apt repository.
+   2) Install the Docker packages.
+   3) Verify that the Docker Engine installation is successful by running the hello-world image.
+
+   $ sudo systemctl enable docker.service
+   result: 
+   Synchronizing state of docker.service with SysV service script with /lib/systemd/systemd-sysv-install.
+   Executing: /lib/systemd/systemd-sysv-install enable docker
+
+   $ sudo systemctl enable containerd.service
+
+Reference:
+      - https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
+      - https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04
+
+FYI!
+[Hub.docker.com](https://hub.docker.com) adalah repositori resmi online untuk Docker images. Ini adalah platform tempat pengembang dapat berbagi dan mengelola images Docker yang sudah dikonfigurasi sebelumnya. Docker Hub menyediakan:
+1. Docker Images: Anda dapat mengunduh berbagai images dari Docker Hub, baik yang dibuat oleh komunitas maupun yang dibuat oleh organisasi resmi. Images ini mencakup berbagai aplikasi, database, dan layanan seperti Nginx, Redis, PostgreSQL, dan lainnya.
+2. Private/Public Repositories: Anda dapat membuat repository pribadi atau publik untuk menyimpan images Docker yang Anda buat. Public repository dapat diakses oleh siapa saja, sedangkan private repository hanya dapat diakses oleh orang-orang yang Anda izinkan.
+3. Automated Builds: Docker Hub menyediakan fitur untuk membuat image Docker secara otomatis dari source code yang ada di GitHub atau Bitbucket. Ketika Anda mengupdate kode di repository Git, Docker Hub bisa secara otomatis membuat ulang image Docker berdasarkan perubahan tersebut.
+4. Official Images: Docker Hub memiliki banyak official images yang dikelola oleh Docker atau organisasi tertentu. Images ini telah diuji dan dipercaya untuk digunakan sebagai dasar aplikasi Anda.
+5. Image Tags: Setiap image di Docker Hub biasanya memiliki beberapa "tag", yang merepresentasikan versi yang berbeda dari aplikasi di dalam image tersebut. Misalnya, untuk image `node`, Anda bisa menemukan tag seperti `node:14`, `node:16`, atau `node:latest` yang sesuai dengan versi Node.js.
+Jika Anda sedang bekerja dengan Docker dan memerlukan images yang sudah dikonfigurasi, Docker Hub adalah tempat utama untuk menemukannya. Anda juga dapat menggunakan Docker Hub untuk menyimpan images Docker yang Anda buat sendiri untuk digunakan atau dibagikan.
+
+## Download Download Docker Image (hub.docker.com)
+$ docker image pull nama-image:tag
+
+## Menghapus Docker Image
+$ docker image rm nama-image:tag
+
+Jika perintah tsb gagal gunakan opsi -f (force) untuk memaksa penghapusan image:
+$ docker image rm -f nama-image:tag
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
